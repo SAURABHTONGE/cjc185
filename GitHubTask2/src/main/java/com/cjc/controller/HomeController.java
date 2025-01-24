@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,6 +35,13 @@ public class HomeController {
 	public String deleteAllData() {
 		si.deleteAll();
 		return "delete All Student Date";
+	}
+	
+	@PutMapping("updateById/{id}")
+	public Student updateData(@RequestBody Student s,@PathVariable int id) {
+		Student st=si.updateById(s,id);
+		return st;
+		
 	}
 	
 }

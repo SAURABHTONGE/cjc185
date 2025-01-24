@@ -1,6 +1,9 @@
 package com.cjc.serviceImpl;
 
+<<<<<<< HEAD
 import java.util.List;
+=======
+>>>>>>> branch 'main' of https://github.com/SAURABHTONGE/cjc185.git
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +57,28 @@ public class StudentServiceImpl implements StudentService {
 		}
 
 		return null;
+	}
+	@Override
+	public Student updateById(Student s, int id) {
+		Optional<Student> byId = sr.findById(id);
+		if(byId.isPresent()) {
+			Student st = byId.get();
+			if(s.getName()!=null) {
+				st.setName(s.getName());
+			}
+			if(s.getAddress()!=null) {
+				st.setAddress(s.getAddress());
+			}
+			if(s.getMobNo()!=0) {
+				st.setMobNo(s.getMobNo());
+			}
+			if(s.getSubject()!=null) {
+				st.setSubject(s.getSubject());
+			}
+			sr.save(st);
+			return st;
+		}
+		return sr.save(s);
 	}
 
 }
