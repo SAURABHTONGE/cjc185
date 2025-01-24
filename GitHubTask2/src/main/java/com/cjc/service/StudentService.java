@@ -12,12 +12,12 @@ public interface StudentService {
 
 	void deleteAll();
 
-<<<<<<< HEAD
 	public List<Student> getallstudent();
 
 	public Student getsingle(int id);
-=======
-	Student updateById(Student s, int id);
->>>>>>> branch 'main' of https://github.com/SAURABHTONGE/cjc185.git
+
+	public Student updateById(Student s, int id);
+
+	public Student updateStudent(Student s);
 
 }

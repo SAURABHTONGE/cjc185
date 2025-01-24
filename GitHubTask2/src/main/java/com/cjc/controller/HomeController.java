@@ -16,32 +16,39 @@ public class HomeController {
 
 	@Autowired
 	StudentService si;
-	
+
 	@PostMapping("/add")
 	public String addData(@RequestBody Student s) {
 		si.dataStudent(s);
 		return "Data Added Successfully!!";
-	
+
 	}
-	
+
 	@DeleteMapping("/deleteById")
 	public String deleteById(@PathVariable int id) {
 		si.deleteById(id);
-		return "Deleted Student by id:"+id;
-		
+		return "Deleted Student by id:" + id;
+
 	}
-	
+
 	@DeleteMapping("/deleteAll")
 	public String deleteAllData() {
 		si.deleteAll();
 		return "delete All Student Date";
 	}
-	
+
 	@PutMapping("updateById/{id}")
-	public Student updateData(@RequestBody Student s,@PathVariable int id) {
-		Student st=si.updateById(s,id);
+	public Student updateData(@RequestBody Student s, @PathVariable int id) {
+		Student st = si.updateById(s, id);
 		return st;
-		
+
 	}
-	
+
+	@PutMapping("update/{id}")
+	public Student updateStudent(@RequestBody Student s) {
+
+		Student st = si.updateStudent(s);
+
+		return st;
+	}
 }

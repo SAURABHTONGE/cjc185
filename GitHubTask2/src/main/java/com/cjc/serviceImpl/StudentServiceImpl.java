@@ -1,8 +1,6 @@
 package com.cjc.serviceImpl;
 
-
 import java.util.List;
-
 
 import java.util.Optional;
 
@@ -58,27 +56,35 @@ public class StudentServiceImpl implements StudentService {
 
 		return null;
 	}
+
 	@Override
 	public Student updateById(Student s, int id) {
 		Optional<Student> byId = sr.findById(id);
-		if(byId.isPresent()) {
+		if (byId.isPresent()) {
 			Student st = byId.get();
-			if(s.getName()!=null) {
+			if (s.getName() != null) {
 				st.setName(s.getName());
 			}
-			if(s.getAddress()!=null) {
+			if (s.getAddress() != null) {
 				st.setAddress(s.getAddress());
 			}
-			if(s.getMobNo()!=0) {
+			if (s.getMobNo() != 0) {
 				st.setMobNo(s.getMobNo());
 			}
-			if(s.getSubject()!=null) {
+			if (s.getSubject() != null) {
 				st.setSubject(s.getSubject());
 			}
 			sr.save(st);
 			return st;
 		}
 		return sr.save(s);
+	}
+
+	@Override
+	public Student updateStudent(Student s) {
+
+		Student student = sr.save(s);
+		return student;
 	}
 
 }
