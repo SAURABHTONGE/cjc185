@@ -1,9 +1,9 @@
 package com.cjc.serviceImpl;
 
-<<<<<<< HEAD
+
 import java.util.List;
-=======
->>>>>>> branch 'main' of https://github.com/SAURABHTONGE/cjc185.git
+
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
