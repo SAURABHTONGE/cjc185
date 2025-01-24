@@ -33,7 +33,7 @@ public class HomeController {
 	@DeleteMapping("/deleteAll")
 	public String deleteAllData() {
 		si.deleteAll();
-		return "delete All Student Date";
+		return "deleted All Student Data....!";
 	}
 	
 }
