@@ -10,4 +10,6 @@ public interface StudentService {
 
 	void deleteAll();
 
+	Student updateById(Student s, int id);
+
 }
