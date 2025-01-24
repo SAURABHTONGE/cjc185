@@ -6,4 +6,8 @@ public interface StudentService {
 
 	void dataStudent(Student s);
 
+	void deleteById(int id);
+
+	void deleteAll();
+
 }

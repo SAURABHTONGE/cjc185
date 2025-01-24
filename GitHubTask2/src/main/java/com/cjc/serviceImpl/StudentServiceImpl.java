@@ -15,5 +15,17 @@ public class StudentServiceImpl implements StudentService {
 	public void dataStudent(Student s) {
 		sr.save(s);
 	}
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		sr.deleteById(id);
+		
+	}
+	@Override
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		sr.deleteAll();
+		
+	}
 
 }
