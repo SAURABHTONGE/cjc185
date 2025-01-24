@@ -1,6 +1,7 @@
 package com.cjc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,10 +14,11 @@ public class HomeController {
 	@Autowired
 	StudentService si;
 	
+	@PostMapping("/add")
 	public String addData(@RequestBody Student s) {
 		si.dataStudent(s);
 		return "Data Added Successfully!!";
-		
-		
+	
 	}
+	
 }

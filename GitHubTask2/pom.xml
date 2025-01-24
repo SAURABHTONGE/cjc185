@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.cjc</groupId>
-	<artifactId>GitHubTask1</artifactId>
+	<artifactId>GitHubTask2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>GitHubTask1</name>
+	<name>GitHubTask2</name>
 	<description>Demo App Task</description>
 	<url/>
 	<licenses>
