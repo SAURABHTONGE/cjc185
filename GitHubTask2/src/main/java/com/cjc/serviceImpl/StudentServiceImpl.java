@@ -37,27 +37,6 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public List<Student> getallstudent() {
-
-		return sr.findAll();
-	}
-
-	@Override
-	public Student getsingle(int id) {
-
-		Optional<Student> op = sr.findById(id);
-
-		if (op.isPresent()) {
-
-			Student student = op.get();
-
-			return student;
-		}
-
-		return null;
-	}
-
-	@Override
 	public Student updateById(Student s, int id) {
 		Optional<Student> byId = sr.findById(id);
 		if (byId.isPresent()) {
@@ -87,6 +66,14 @@ public class StudentServiceImpl implements StudentService {
 		return student;
 	}
 
+<<<<<<< HEAD
 
+=======
+	@Override
+	public List<Student> getall() {
+
+		return sr.findAll();
+	}
+>>>>>>> branch 'main' of https://github.com/SAURABHTONGE/cjc185.git
 
 }
