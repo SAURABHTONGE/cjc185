@@ -55,9 +55,12 @@ public class HomeController {
 		return st;
 	}
 	
+	
+	
 	@GetMapping("/getall")
 	public List<Student> getall() {
 
+		
 		List<Student> li = si.getall();
 
 	    return li;
