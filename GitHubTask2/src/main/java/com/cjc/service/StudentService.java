@@ -18,13 +18,12 @@ public interface StudentService {
 
 	public Student updateStudent(Student s);
 
-<<<<<<< HEAD
-=======
+
 	public List<Student> getall();
 
 	public Student getsingle(int id);
 
 	
->>>>>>> branch 'main' of https://github.com/SAURABHTONGE/cjc185.git
+
 
 }
