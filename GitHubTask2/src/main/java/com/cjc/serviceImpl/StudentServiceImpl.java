@@ -66,11 +66,15 @@ public class StudentServiceImpl implements StudentService {
 		return student;
 	}
 
+
+
+
 	@Override
 	public List<Student> getall() {
 
 		return sr.findAll();
 	}
+
 
 	@Override
 	public Student getsingle(int id) {
