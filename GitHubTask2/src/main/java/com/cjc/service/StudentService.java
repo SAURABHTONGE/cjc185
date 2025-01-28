@@ -20,6 +20,8 @@ public interface StudentService {
 
 	public List<Student> getall();
 
+	public Student getsingle(int id);
+
 	
 
 }

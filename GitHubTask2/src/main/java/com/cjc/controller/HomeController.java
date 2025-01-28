@@ -54,15 +54,21 @@ public class HomeController {
 
 		return st;
 	}
-	
-	
-	
+
 	@GetMapping("/getall")
 	public List<Student> getall() {
 
-		
 		List<Student> li = si.getall();
 
-	    return li;
+		return li;
+	}
+
+	@GetMapping("/getsingle/{id}")
+	public Student getSingle(@PathVariable int id) {
+
+		Student student = si.getsingle(id);
+
+		return student;
+
 	}
 }

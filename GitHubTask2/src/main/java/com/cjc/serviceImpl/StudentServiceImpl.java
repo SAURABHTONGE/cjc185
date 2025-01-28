@@ -72,4 +72,19 @@ public class StudentServiceImpl implements StudentService {
 		return sr.findAll();
 	}
 
+	@Override
+	public Student getsingle(int id) {
+
+		Optional<Student> op = sr.findById(id);
+
+		if (op.isPresent()) {
+
+			Student student = op.get();
+
+			return student;
+		}
+
+		return null;
+	}
+
 }
